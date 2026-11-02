@@ -1,0 +1,339 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SESD - Software Engineering Learning Portal</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #101d36;
+            color: white;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #101d36, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 90px 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .section {
+            padding: 55px 8%;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 30px;
+            color: #14213d;
+        }
+
+        .intro {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            text-align: center;
+        }
+
+        .topics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid #2563eb;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #475569;
+            font-size: 14px;
+        }
+
+        .importance {
+            background: #e8f1ff;
+        }
+
+        .importance ul {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .importance li {
+            margin: 12px 0;
+        }
+
+        footer {
+            background: #101d36;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media(max-width: 850px) {
+            .topics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .topics {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>SESD Learning Portal</h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#topics">Topics</a>
+            <a href="#importance">Importance</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Welcome to Software Engineering</h1>
+
+        <p>
+            Learn how to design, develop, test and maintain
+            high-quality software through systematic engineering
+            principles and modern development practices.
+        </p>
+    </section>
+
+    <section class="section" id="about">
+        <h2>About Software Engineering</h2>
+
+        <div class="intro">
+            <p>
+                Software Engineering is the systematic approach
+                to developing, operating, testing and maintaining
+                software applications. It helps developers build
+                reliable, efficient, scalable and high-quality
+                software products.
+            </p>
+        </div>
+    </section>
+
+    <section class="section" id="topics">
+        <h2>Important SESD Topics</h2>
+
+        <div class="topics">
+
+            <div class="card">
+                <h3>1. Software Development Life Cycle (SDLC)</h3>
+                <p>
+                    SDLC is a step-by-step process used to develop
+                    software. Its phases include planning,
+                    requirement analysis, design, development,
+                    testing, deployment and maintenance.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>2. Requirement Engineering</h3>
+                <p>
+                    It involves collecting, analyzing and documenting
+                    user requirements. Functional requirements
+                    describe what a system does, while non-functional
+                    requirements describe its quality attributes.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>3. Software Process Models</h3>
+                <p>
+                    Process models define how software is developed.
+                    Important models include Waterfall, Iterative,
+                    Spiral, Prototype and V-Model.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>4. Agile Methodology</h3>
+                <p>
+                    Agile is an iterative development approach.
+                    It divides work into small cycles called sprints
+                    and encourages teamwork, feedback and continuous
+                    improvement.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>5. Software Design</h3>
+                <p>
+                    Software design defines the structure and
+                    components of an application. It includes
+                    architecture design, database design,
+                    modularity and design principles.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>6. UML Diagrams</h3>
+                <p>
+                    Unified Modeling Language helps visualize
+                    software systems. Important diagrams include
+                    Use Case, Class, Activity, Sequence and
+                    State diagrams.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>7. Software Testing</h3>
+                <p>
+                    Testing identifies errors and verifies that
+                    software works correctly. Types include
+                    Unit Testing, Integration Testing,
+                    System Testing and Acceptance Testing.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>8. Version Control - Git & GitHub</h3>
+                <p>
+                    Version control tracks changes in source code.
+                    Git manages code versions, while GitHub
+                    provides an online platform for collaboration
+                    and project management.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>9. CI/CD Pipeline</h3>
+                <p>
+                    Continuous Integration and Continuous Delivery
+                    automate software building, testing and
+                    deployment. GitHub Actions is commonly used
+                    to create CI/CD workflows.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>10. Software Maintenance</h3>
+                <p>
+                    Software maintenance involves modifying
+                    applications after deployment to fix bugs,
+                    improve performance and add new features.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>11. Software Quality Assurance</h3>
+                <p>
+                    SQA ensures software meets quality standards.
+                    It focuses on reliability, usability,
+                    efficiency, security and maintainability.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>12. Software Project Management</h3>
+                <p>
+                    It involves planning, scheduling, resource
+                    allocation, risk management and monitoring
+                    project progress to complete software projects
+                    successfully.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section importance" id="importance">
+        <h2>Why Learn Software Engineering?</h2>
+
+        <ul>
+            <li>Develop high-quality and reliable software.</li>
+            <li>Understand real-world software development processes.</li>
+            <li>Improve teamwork and collaboration.</li>
+            <li>Reduce development time and project costs.</li>
+            <li>Learn testing, automation and deployment.</li>
+            <li>Prepare for real-world software engineering careers.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2026 SESD Learning Portal</p>
+        <p>Learn • Design • Develop • Test • Deploy</p>
+    </footer>
+
+</body>
+</html>
+```
