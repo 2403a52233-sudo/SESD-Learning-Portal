@@ -1,0 +1,41 @@
+```yaml
+name: SESD Learning Portal CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Check HTML File
+        run: test -f index.html
+
+      - name: Check Website Title
+        run: grep -q "SESD Learning Portal" index.html
+
+      - name: Check Main Heading
+        run: grep -q "Welcome to Software Engineering" index.html
+
+      - name: Check Important Topics
+        run: |
+          grep -q "Software Development Life Cycle" index.html
+          grep -q "Requirement Engineering" index.html
+          grep -q "Agile Methodology" index.html
+          grep -q "UML Diagrams" index.html
+          grep -q "Software Testing" index.html
+          grep -q "CI/CD Pipeline" index.html
+
+      - name: Build Successful
+        run: echo "SESD Website CI Pipeline Executed Successfully!"
+```
